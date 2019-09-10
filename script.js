@@ -1,4 +1,4 @@
-var countdownDate = new Date("Mar 15, 2020 00:00:00").getTime();
+var countdownDate = new Date("Mar 22, 2020 00:00:00").getTime();
 
 var months, days, hours, minutes, seconds;
 
