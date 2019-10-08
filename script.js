@@ -1,27 +1,52 @@
-var countdownDate = new Date("Mar 22, 2020 00:00:00").getTime();
+var departureDate = new Date("Mar 22, 2020 00:00:00").getTime();
+var coeDate = new Date("Feb 1, 2020 00:00:00").getTime();
 
 var months, days, hours, minutes, seconds;
 
 var interval = setInterval(function() {
   var now = new Date().getTime();
   
-  var distance = parseInt((countdownDate - now) / 1000);
+  var departureDistance = parseInt((departureDate - now) / 1000);
 
-  if (distance >= 0) {
-    months = parseInt(distance / 2592000);
-    distance = distance % 2592000;
+  if (departureDistance >= 0) {
+    months = parseInt(departureDistance / 2592000);
+    departureDistance = departureDistance % 2592000;
 
-    days = parseInt(distance / 86400);
-    distance = distance % 86400;
+    days = parseInt(departureDistance / 86400);
+    departureDistance = departureDistance % 86400;
 
-    hours = parseInt(distance / 3600);
-    distance = distance % 3600;
+    hours = parseInt(departureDistance / 3600);
+    departureDistance = departureDistance % 3600;
 
-    minutes = parseInt(distance / 60);
-    distance = distance % 60;
+    minutes = parseInt(departureDistance / 60);
+    departureDistance = departureDistance % 60;
 
-    seconds = parseInt(distance);
+    seconds = parseInt(departureDistance);
 
-    document.getElementById("display").innerHTML = "On est au Japon dans " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+    document.getElementById("departure").innerHTML = "On est au Japon dans " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+  }
+}, 1000);
+
+var coeInterval = setInterval(function() {
+  var now = new Date().getTime();
+
+  var coeDistance = parseInt((coeDate - now) / 1000);
+
+  if (coeDistance >= 0) {
+    months = parseInt(coeDistance / 2592000);
+    coeDistance = coeDistance % 2592000;
+
+    days = parseInt(coeDistance / 86400);
+    coeDistance = coeDistance % 86400;
+
+    hours = parseInt(coeDistance / 3600);
+    coeDistance = coeDistance % 3600;
+
+    minutes = parseInt(coeDistance / 60);
+    coeDistance = coeDistance % 60;
+
+    seconds = parseInt(coeDistance);
+
+    document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
   }
 }, 1000);

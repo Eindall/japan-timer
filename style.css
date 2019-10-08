@@ -1,6 +1,11 @@
-#display {
+#departure {
   text-align: center;
   font-size: 50px;
+}
+
+#coe_release {
+  text-align: center;
+  font-size: 45px;
 }
 
 #ouais {
