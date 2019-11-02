@@ -1,11 +1,11 @@
-var departureDate = new Date("Mar 22, 2020 00:00:00").getTime();
+var departureDate = new Date("Mar 16, 2020 00:00:00").getTime();
 var coeDate = new Date("Feb 1, 2020 00:00:00").getTime();
 
 var months, days, hours, minutes, seconds;
 
 var interval = setInterval(function() {
   var now = new Date().getTime();
-  
+
   var departureDistance = parseInt((departureDate - now) / 1000);
 
   if (departureDistance >= 0) {
