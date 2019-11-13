@@ -1,5 +1,5 @@
-var departureDate = new Date("Mar 16, 2020 00:00:00").getTime();
-var coeDate = new Date("Feb 1, 2020 00:00:00").getTime();
+var departureDate = new Date("Mar 20, 2020 00:00:00").getTime();
+var coeDate = new Date("Feb 28, 2020 00:00:00").getTime();
 
 var months, days, hours, minutes, seconds;
 
@@ -24,6 +24,8 @@ var interval = setInterval(function() {
     seconds = parseInt(departureDistance);
 
     document.getElementById("departure").innerHTML = "On est au Japon dans " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+  } else {
+    document.getElementById("departure").innerHTML = "ON EST AU JAPON AYAYA";
   }
 }, 1000);
 
@@ -48,5 +50,7 @@ var coeInterval = setInterval(function() {
     seconds = parseInt(coeDistance);
 
     document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+  } else {
+    document.getElementsById("coe_release").innerHTML = "ON A NOTRE COE AYAYA";
   }
 }, 1000);
