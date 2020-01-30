@@ -1,5 +1,5 @@
 var departureDate = new Date("Mar 22, 2020 00:00:00").getTime();
-var coeDate = new Date("Feb 28, 2020 00:00:00").getTime();
+var coeDate = new Date("Feb 25, 2020 00:00:00").getTime();
 
 var months, days, hours, minutes, seconds;
 
