@@ -29,20 +29,9 @@ var interval = setInterval(function () {
 
     seconds = parseInt(departureDistance);
 
-    document.getElementById("departure").innerHTML = "On est au Japon dans " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+    document.getElementById("departure").innerHTML = "On est au Japon dans " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
   } else {
     document.getElementById("departure").innerHTML = "ON EST AU JAPON AYAYA";
-  }
-
-  if (hour === 9 && minutes === 0 && seconds === 0) {
-    var text = "J-" + (parseInt(parseInt((departureDate - now) / 1000) / 86400));
-    var xmlHttp = new XMLHttpRequest();
-    var message = {
-      content: text,
-    };
-    xmlHttp.open("POST", "https://discordapp.com/api/webhooks/656069960241512448/4vTwc0Vuh1A5u0MXMnfnQr8ZiLV4kQj40MtUTbXIdwf1x05fvsnQ_t05YyOy3WLU1uB-", true);
-    xmlHttp.setRequestHeader("Content-Type", "application/json");
-    xmlHttp.send(JSON.stringify(message));
   }
 }, 1000);
 
@@ -66,7 +55,7 @@ var coeInterval = setInterval(function () {
 
     seconds = parseInt(coeDistance);
 
-    document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + months + " mois, " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+    document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
   } else {
     document.getElementsById("coe_release").innerHTML = "ON A NOTRE COE AYAYA";
   }
