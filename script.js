@@ -57,6 +57,6 @@ var coeInterval = setInterval(function () {
 
     document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
   } else {
-    document.getElementsById("coe_release").innerHTML = "ON A NOTRE COE AYAYA";
+    document.getElementById("coe_release").innerHTML = "LE COE AYAYA";
   }
 }, 1000);
