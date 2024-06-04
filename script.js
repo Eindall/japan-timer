@@ -1,16 +1,9 @@
-var departureDate = new Date("Mar 22, 2020 00:00:00").getTime();
-var coeDate = new Date("Feb 25, 2020 00:00:00").getTime();
+var departureDate = new Date('November 4, 2024 11:20:00').getTime();
 
 var months, days, hours, minutes, seconds;
 
 var interval = setInterval(function () {
-  var now = new Date();
-
-  var hour = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
-
-  now = now.getTime();
+  var now = new Date().getTime();
 
   var departureDistance = parseInt((departureDate - now) / 1000);
 
@@ -29,34 +22,10 @@ var interval = setInterval(function () {
 
     seconds = parseInt(departureDistance);
 
-    document.getElementById("departure").innerHTML = "On est au Japon dans " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
+    document.getElementById(
+      'departure'
+    ).innerHTML = `On part au Japon dans ${months} mois, ${days} jours, ${hours} heures, ${minutes} minutes et ${seconds} secondes !`;
   } else {
-    document.getElementById("departure").innerHTML = "ON EST AU JAPON AYAYA";
-  }
-}, 1000);
-
-var coeInterval = setInterval(function () {
-  var now = new Date().getTime();
-
-  var coeDistance = parseInt((coeDate - now) / 1000);
-
-  if (coeDistance >= 0) {
-    months = parseInt(coeDistance / 2592000);
-    coeDistance = coeDistance % 2592000;
-
-    days = parseInt(coeDistance / 86400);
-    coeDistance = coeDistance % 86400;
-
-    hours = parseInt(coeDistance / 3600);
-    coeDistance = coeDistance % 3600;
-
-    minutes = parseInt(coeDistance / 60);
-    coeDistance = coeDistance % 60;
-
-    seconds = parseInt(coeDistance);
-
-    document.getElementById("coe_release").innerHTML = "On devrait recevoir notre CoE dans environ " + days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes !";
-  } else {
-    document.getElementById("coe_release").innerHTML = "LE COE AYAYA";
+    document.getElementById('departure').innerHTML = 'ON EST AU JAPON AYAYA';
   }
 }, 1000);
